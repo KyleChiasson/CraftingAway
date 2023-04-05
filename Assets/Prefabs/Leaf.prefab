@@ -99,8 +99,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 85dc9e186b0a99248a9964bb4340ff7b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  InteractNotifier: {fileID: 1129206065249172827}
-  HeldItem: {fileID: 11400000, guid: ce7d43743f99ded46be051a72b663f7f, type: 2}
+  InteractNotifier: {fileID: 1129206065248326792}
+  HeldItem: Leaf
 --- !u!60 &4538763926617697096
 PolygonCollider2D:
   m_ObjectHideFlags: 0
@@ -333,7 +333,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1129206065248326795
 RectTransform:
   m_ObjectHideFlags: 0
@@ -411,7 +411,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &1129206065249172824
 RectTransform:
   m_ObjectHideFlags: 0

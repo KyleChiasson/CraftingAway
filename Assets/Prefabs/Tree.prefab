@@ -230,7 +230,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &9061614459921487149
 RectTransform:
   m_ObjectHideFlags: 0
@@ -574,5 +574,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 85dc9e186b0a99248a9964bb4340ff7b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  InteractNotifier: {fileID: 9061614459921487150}
-  HeldItem: {fileID: 11400000, guid: 9995a2bbc36d6954e939dbcca746837a, type: 2}
+  InteractNotifier: {fileID: 9061614459920497917}
+  HeldItem: Lumber

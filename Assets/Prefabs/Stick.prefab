@@ -18,7 +18,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &3825060422421724873
 RectTransform:
   m_ObjectHideFlags: 0
@@ -118,7 +118,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &3825060422422714138
 RectTransform:
   m_ObjectHideFlags: 0
@@ -412,8 +412,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 85dc9e186b0a99248a9964bb4340ff7b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  InteractNotifier: {fileID: 3825060422421724874}
-  HeldItem: {fileID: 11400000, guid: e2eb7876ec12f5e479a8823fa919d6c4, type: 2}
+  InteractNotifier: {fileID: 3825060422422714137}
+  HeldItem: Stick
 --- !u!60 &948863670719370205
 PolygonCollider2D:
   m_ObjectHideFlags: 0

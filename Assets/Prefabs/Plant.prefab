@@ -17,7 +17,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &5340372697694538958
 RectTransform:
   m_ObjectHideFlags: 0
@@ -95,7 +95,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &5340372697697510685
 RectTransform:
   m_ObjectHideFlags: 0
@@ -412,8 +412,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 85dc9e186b0a99248a9964bb4340ff7b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  InteractNotifier: {fileID: 5340372697697510686}
-  HeldItem: {fileID: 11400000, guid: a70b7ecafe2cc1a4eab14419331b3794, type: 2}
+  InteractNotifier: {fileID: 5340372697694538957}
+  HeldItem: Plant
 --- !u!60 &6705682333063637546
 PolygonCollider2D:
   m_ObjectHideFlags: 0

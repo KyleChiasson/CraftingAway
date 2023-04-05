@@ -1,19 +1,20 @@
 using UnityEngine;
+using UnityEngine.UI;
 
 public abstract class Interact : MonoBehaviour
 {
-    public GameObject InteractNotifier;
+    public Image InteractNotifier;
     private float timer = 0.0f;
-    private void Update()
+    protected void Update()
     {
-        if (!InteractNotifier.activeSelf && Vector2.Distance(transform.position, CharacterControler.Instance.transform.position) < 3)
-            InteractNotifier.SetActive(true);
-        else if (InteractNotifier.activeSelf && Vector2.Distance(transform.position, CharacterControler.Instance.transform.position) >= 3)
+        if (!InteractNotifier.gameObject.activeSelf && Vector2.Distance(transform.position, CharacterControler.Instance.transform.position) < 3)
+            InteractNotifier.gameObject.SetActive(true);
+        else if (InteractNotifier.gameObject.activeSelf && Vector2.Distance(transform.position, CharacterControler.Instance.transform.position) >= 3)
         {
-            InteractNotifier.SetActive(false);
+            InteractNotifier.gameObject.SetActive(false);
             timer = 0.0f;
         }
-        if(InteractNotifier.activeSelf && Input.GetKey(KeyCode.E))
+        if(InteractNotifier.gameObject.activeSelf && Input.GetKey(KeyCode.E))
             timer += Time.deltaTime;
         if(timer >= 1f)
         {

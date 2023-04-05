@@ -1,55 +1,44 @@
-using System;
 using TMPro;
 using UnityEngine.UI;
 
 public class Vendor : Interact
 {
-    public Item[] potentialItems;
-    public bool Sell;
+    public string[] potentialItems;
     public Image Image;
     public TMP_Text Text;
     public Item ForSale;
     public int Price;
-    private void Awake()
+    private new void Update()
     {
-        UnityEngine.Random.InitState(DateTime.Now.Minute + DateTime.Now.Second + DateTime.Now.Millisecond);
+        base.Update();
+        if ((Price < 0 && Inventory.Instance.Currency + Price <= 0) || (Price > 0 && Inventory.Instance.ItemAmount(ForSale.Name) <= 0))
+            InteractNotifier.color = UnityEngine.Color.red;
+        else InteractNotifier.color = UnityEngine.Color.white;
     }
     public void SetItem()
     {
-        float r = UnityEngine.Random.Range(0f, 1f);
-        int i = 0;
-        while (r > potentialItems[i].Chance && i < potentialItems.Length - 1)
-        {
-            r -= potentialItems[i].Chance;
-            i++;
-        }
-        ForSale = potentialItems[i];
+        int r = UnityEngine.Random.Range(0, potentialItems.Length);
+        ForSale = GameManger.Items[potentialItems[r]];
         Image.sprite = ForSale.Sprite;
-        Price = UnityEngine.Random.Range(potentialItems[i].Min, potentialItems[i].Max + 1);
-        Text.text = ((Sell ? -1 : 1) * Price).ToString();
+        Price = UnityEngine.Random.Range(GameManger.Items[potentialItems[r]].MinCost(), GameManger.Items[potentialItems[r]].MaxCost() + 1);
+        Text.text = Price.ToString();
     }
     public override void Interacted()
     {
-        if (Sell)
+        if (Price <= 0 && Inventory.Instance.Currency >= Price)
         {
-            if(Inventory.Instance.Currency >= Price)
+           if(ForSale.Name == "Present")
             {
-                if(ForSale.name == "Present")
-                    GameManger.Instance.Win();
-                else
-                {
-                    Inventory.Instance.ChangeCurrencyAmount(-Price);
-                    Inventory.Instance.ChangeItemAmount(ForSale.Name, 5);
-                }
+                GameManger.Instance.Win();
+                return;
             }
+            Inventory.Instance.ChangeCurrencyAmount(Price);
+            Inventory.Instance.ChangeItemAmount(ForSale.Name, 5);
         }
-        else
+        else if(Price > 0 && Inventory.Instance.ItemAmount(ForSale.Name) >= 1)
         {
-            if (Inventory.Instance.ItemAmount(ForSale.Name) >= 1)
-            {
-                Inventory.Instance.ChangeCurrencyAmount(Price);
-                Inventory.Instance.ChangeItemAmount(ForSale.Name, -1);
-            }
+            Inventory.Instance.ChangeCurrencyAmount(Price);
+            Inventory.Instance.ChangeItemAmount(ForSale.Name, -1);
         }
     }
 }

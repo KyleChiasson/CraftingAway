@@ -153,7 +153,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &6917164497476635243
 RectTransform:
   m_ObjectHideFlags: 0
@@ -253,7 +253,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &6917164497479836600
 RectTransform:
   m_ObjectHideFlags: 0
@@ -412,8 +412,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 85dc9e186b0a99248a9964bb4340ff7b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  InteractNotifier: {fileID: 6917164497476635240}
-  HeldItem: {fileID: 11400000, guid: 609ce1ad3063105419bc15a74f66374e, type: 2}
+  InteractNotifier: {fileID: 6917164497479836603}
+  HeldItem: Rock
 --- !u!60 &5085013369963766562
 PolygonCollider2D:
   m_ObjectHideFlags: 0

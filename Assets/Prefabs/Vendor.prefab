@@ -119,7 +119,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &6518904219898142098
 RectTransform:
   m_ObjectHideFlags: 0
@@ -513,12 +513,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2ad32c6862cb7d74fa95a1a9abfc87d1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  InteractNotifier: {fileID: 1371191590179634054}
+  InteractNotifier: {fileID: 7431904213575406266}
   potentialItems: []
   Sell: 0
   Image: {fileID: 3105223189593269202}
   Text: {fileID: 5545850434692238366}
-  ForSale: {fileID: 0}
   Price: 0
 --- !u!1 &8002751431824682649
 GameObject:
